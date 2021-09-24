@@ -62,6 +62,9 @@ public class TodoUtil {
 					l.deleteItem(item);
 					System.out.println("입력한 데이터가 리스트에서 삭제되었습니다.");
 					break;
+				} else {
+					System.out.println("입력한 데이터가 리스트에서 삭제되지 않았습니다.");
+					break;
 				}
 			}
 			count++;
