@@ -12,6 +12,10 @@ public class Menu {
         System.out.println("[ls_name_asc] title 순으로 입력된 데이터 정렬");
         System.out.println("[ls_name_desc] title 순으로 reverse로 데이터 정렬");
         System.out.println("[ls_date] 입력된 시간 순으로 데이터 정렬");
+        System.out.println("[ls_date_desc] 현재 목록을 날짜 역순으로 정렬");
+        System.out.println("[find <keyword>] 현재 목록 내의 제목과 내용에서 <keyword>를 포함한 모든 항목 출력");
+        System.out.println("[find_cate <keyword>] 현재 목록의 카테고리를 검색 <keyword>를 포함하고 있는 모든 항목을 출력");
+        System.out.println("[ls_cate] 현재 등록되어 있는 카테고리를 중복되지 않도록 출력");
         System.out.println("[help] 메뉴 다시 보기 / 도움말");
         System.out.println("[exit] 프로그램 종료");
     }
