@@ -9,6 +9,7 @@ public class TodoItem {
     private String current_date;
     private String category;
     private String due_date;
+    private int id;
 
     public String getCategory() {
 		return category;
@@ -26,7 +27,7 @@ public class TodoItem {
 		this.due_date = due_date;
 	}
 
-	public TodoItem( String category, String title, String desc, String due_date){
+	public TodoItem(String title, String desc, String category, String due_date){
 		this.category = category;
         this.title=title;
         this.desc=desc;
@@ -61,8 +62,19 @@ public class TodoItem {
 
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
 		return category+"##"+title+"##"+desc+"##"+due_date+"##"+current_date+"\n";
+	}
+	
+	public String ToString() {
+		return id+"    ["+category+"]  "+ title+"  -  "+desc+"  -  "+due_date+"  -  "+current_date;
+	}
+
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public int getId() {
+		return id;
 	}
     
 }
