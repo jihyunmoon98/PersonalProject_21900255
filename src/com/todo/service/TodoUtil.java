@@ -41,7 +41,7 @@ public class TodoUtil {
 		System.out.println("마감 일자 입력 ) ");
 		due_date = sc.nextLine().trim();
 		
-		TodoItem t = new TodoItem(category, title, desc, due_date);
+		TodoItem t = new TodoItem( title, desc, category, due_date);
 		
 		if (l.addItem(t)>0) {
 			System.out.println("입력한 데이터가 리스트에 추가되었습니다.");		
