@@ -44,32 +44,22 @@ public class TodoMain {
 				break;
 
 			case "ls_name":
-				//l.sortByName();
 				System.out.println("제목순으로 List가 정렳되었습니다.");
-				//isList = true;
 				TodoUtil.listAll(l,"title",1);
 				break;
 
 			case "ls_name_desc":
-				//l.sortByName();
-				//l.reverseList();
 				System.out.println("제목 역순으로 List가 정렬되었습니다.");
-				//isList = true;
 				TodoUtil.listAll(l,"title",0);
 				break;
 				
 			case "ls_date":
-				//l.sortByDate();
 				System.out.println("날짜 순으로 List가 정렬되었습니다.");
-				//isList = true;
 				TodoUtil.listAll(l,"due_date",1);
 				break;
 				
 			case "ls_date_desc":
-				//l.sortByDate();
-				//l.reverseList();
 				System.out.println("날짜 역순으로 List가 정렬되었습니다.");
-				//isList = true;
 				TodoUtil.listAll(l,"due_date",0);
 				break;
 			
@@ -83,10 +73,24 @@ public class TodoMain {
 				TodoUtil.findListCate(l,keyword);
 				break;
 				
+			case "Monthly":
+				String date = sc.nextLine().trim();
+				TodoUtil.Monthly(l,date);
+				break;
+				
 			case "ls_cate":
 				TodoUtil.listCateAll(l);
 				break;
 				
+			case "comp":
+				String numbers = sc.nextLine().trim();
+				TodoUtil.completeItem(l,numbers);
+				break;
+				
+			case "ls_comp":
+				TodoUtil.listAll(l,1);
+				break;
+			
 			case "help":
 				Menu.displaymenu();
 				break;
@@ -94,7 +98,7 @@ public class TodoMain {
 			case "exit":
 				quit = true;
 				break;
-
+				
 			default:
 				System.out.println("메뉴에 존재하지 않는 명령어입니다. 정확한 명령어를 다시 입력해주세요. 메뉴를 잊었으면 help를 입력해주세요.");
 				break;
